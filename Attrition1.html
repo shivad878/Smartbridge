@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    form{
+                background-color:skyblue;
+                font-style:italic;
+                font-size: 20px;
+                text-shadow: black;
+                text-decoration-color: black;
+                text-decoration: black;
+            }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <form action="/predict" method="POST" class="main-form needs-validation">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="Age"><b>Enter Age</b></label>
+          <input type="text" name="Age" id="Age" class="form-control is-invalid">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="BusinessTravel"><b>Choose a BusinessTravel:</b></label>
+          <select name="BusinessTravel" id="BusinessTravel" class="form-control">
+            <option value="select" default>SELECT</option>
+            <option value="0">Non-Travel</option>
+            <option value="1">Travel-Frequently</option>
+            <option value="2">Travel-Rarely</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="DailyRate"><b>Enter DailyRate</b></label>
+          <input type="text" name="DailyRate" id="DailyRate" class="form-control is-invalid">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="Department"><b>Choose a Department:</b></label>
+          <select name="Department" id="Department" class="form-control">
+            <option value="select" default>SELECT</option>
+            <option value="0">Human Resources</option>
+            <option value="1">Research & Development</option>
+            <option value="2">Sales</option>
+          </select>
+        </div>
+      </div>  
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="DistanceFromHome"><b>Enter Distance From Home</b></label>
+          <input type="text" name="DistanceFromHome" id="DistanceFromHome" class="form-control is-invalid">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="Education"><b>Enter Education</b></label>
+          <input type="text" name="Education" id="Education" class="form-control is-invalid">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="EducationField"><b>Choose a Education Field:</b></label>
+          <select name="EducationField" id="EducationField" class="form-control">
+            <option value="select" default>SELECT</option>
+            <option value="0">Human Resources</option>
+            <option value="1">Life Sciences</option>
+            <option value="2">Marketing</option>
+            <option value="3">Medical</option>
+            <option value="4">Other</option>
+            <option value="5">Technical Degree</option>
+          </select>
+        </div>
+      </div>
+    <!--
+      <div class="col">
+        <div class="form-group">
+          <label for="gender">Choose Gender</label>
+          <select name="gender" id="gender" class="form-control">
+            <option value="select" default>SELECT</option>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+          </select>
+        </div>
+      </div>
+    </div>
+-->
+
+   <!-- <div class="row"> -->
+      <div class="col">
+        <div class="form-group">
+          <label for="HourlyRate"><b>Enter Hourly Rate</b></label>
+          <input type="text" name="HourlyRate" id="HourlyRate" class="form-control is-invalid">
+        </div>
+      </div>
+     </div>
+     
+     <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="JobLevel"><b>Enter Job Level</b></label>
+          <input type="text" name="JobLevel" id="JobLevel" class="form-control is-invalid">
+        </div>
+      </div>
+   <!-- </div> -->
+
+ <!--   <div class="row"> -->
+      <div class="col">
+        <div class="form-group">
+          <label for="JobRole"><b>Choose a Job Role</b></label>
+          <select name="JobRole" id="JobRole" class="form-control">
+            <option value="select" default>SELECT</option>
+            <option value="0">Healthcare Representative</option>
+            <option value="1">Human Resources</option>
+            <option value="2">Laboratory Technician</option>
+            <option value="3">Manager</option>
+            <option value="4">Manufacturing Director</option>
+            <option value="5">Research Director</option>
+            <option value="6">Research Scientist</option>
+            <option value="7">Sales Executive</option>
+            <option value="8">Sales Representative</option>
+          </select>
+        </div>
+      </div>
+    </div>
+      <!--
+      <div class="col">
+        <div class="form-group">
+          <label for="marriage">Enter Marital Status</label>
+          <input type="text" name="marriage" id="marriage" class="form-control is-invalid">
+        </div>
+      </div>
+    </div>
+    -->
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="MaritalStatus"><b>Choose a Marital Status</b></label>
+          <select name="MaritalStatus" id="MaritalStatus" class="form-control">
+            <option value="select" default>SELECT</option>
+            <option value="0">Divorced</option>
+            <option value="1">Married</option>
+            <option value="2">Single</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="MonthlyIncome"><b>Enter Monthly Income</b></label>
+          <input type="text" name="MonthlyIncome" id="MonthlyIncome" class="form-control is-invalid">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="MonthlyRate"><b>Enter Monthly Rate</b></label>
+          <input type="text" name="MonthlyRate" id="MonthlyRate" class="form-control is-invalid">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="NumCompaniesWorked"><b>Enter Num Companies Worked</b></label>
+          <input type="text" name="NumCompaniesWorked" id="NumCompaniesWorked" class="form-control is-invalid">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="OverTime"><b>Choose Over Time</b></label>
+          <select name="OverTime" id="OverTime" class="form-control">
+            <option value="select" default>SELECT</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="PercentSalaryHike"><b>Enter Percent Salary Hike</b></label>
+          <input type="text" name="PercentSalaryHike" id="PercentSalaryHike" class="form-control is-invalid">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="PerformanceRating"><b>Enter Performance Rating</b></label>
+          <input type="text" name="PerformanceRating" id="PerformanceRating" class="form-control is-invalid">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="StockOptionLevel"><b>Enter Stock Option Level</b></label>
+          <input type="text" name="StockOptionLevel" id="StockOptionLevel" class="form-control is-invalid">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="TotalWorkingYears"><b>Enter Total Working Years</b></label>
+          <input type="text" name="TotalWorkingYears" id="TotalWorkingYears" class="form-control is-invalid">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="TrainingTimesLastYear"><b>Enter Training Times Last Year</b></label>
+          <input type="text" name="TrainingTimesLastYear" id="TrainingTimesLastYear" class="form-control is-invalid">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="YearsAtCompany"><b>Enter Years At Company</b></label>
+          <input type="text" name="YearsAtCompany" id="YearsAtCompany" class="form-control is-invalid">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="YearsInCurrentRole"><b>Enter Years In Current Role</b></label>
+          <input type="text" name="YearsInCurrentRole" id="YearsInCurrentRole" class="form-control is-invalid">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="YearsSinceLastPromotion"><b>Enter Years Since Last Promotion</b></label>
+          <input type="text" name="YearsSinceLastPromotion" id="YearsSinceLastPromotion" class="form-control is-invalid">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="YearsWithCurrManager"><b>Enter Years With Curr Manager</b></label>
+          <input type="text" name="YearsWithCurrManager" id="YearsWithCurrManager" class="form-control is-invalid">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Total_Satisfaction"><b>Enter Total Satisfaction</b></label>
+      <input type="text" name="Total_Satisfaction" id="Total_Satisfaction" class="form-control" required>
+    </div>
+
+    <center><button type="submit" class="btn btn-primary"><b>Submit</b></button></center>
+
+     <br>
+   <br>
+     <h1>Output:{{ prediction_text }}</h1>
+  </form>
+  
+</body>
+
+</html>
+
