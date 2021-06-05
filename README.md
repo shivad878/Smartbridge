@@ -1,4 +1,4 @@
-# Smartbridge
+# Employee Attrition
 Employee attrition is when an employee leaves the company through any method,
 including voluntary resignations, layoffs, failure to return from a leave of absence,
 or even illness or death. Whenever anyone ceases working for the company for any
